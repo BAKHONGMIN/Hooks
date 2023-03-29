@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Counter from "./Counter";
+import Info from './Info'
 
 const App = () => {
   const [visible, setVisible] = useState(false);
@@ -11,7 +11,7 @@ const App = () => {
         {visible ? '숨기기' : '보이기'};
       </button>
       <hr />
-      {visible && <Counter />}
+      {visible && <Info />}
     </div>
   )
 }
