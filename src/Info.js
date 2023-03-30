@@ -1,22 +1,12 @@
-import { useReducer } from "react";
-
-function reducer(state,action){
-  return {
-    ...state,
-    [action.name]: action.value
-  };
-}
+import useInputs from "./useInputs";
 
 const Info = () => {
-  const [state, dispatch] = useReducer(reducer, {
-    name: '',
-    nickname: ''
+  const [state, onChange] = useInputs({
+    name: "",
+    nickname: ""
   });
 
-  const {name, nickname} = state;
-  const onChange = e => {
-    dispatch(e.target)
-  };
+  const { name, nickname } = state;
 
   return (
     <div>
@@ -26,16 +16,16 @@ const Info = () => {
       </div>
       <div>
         <div>
-          <b>이름:</b> {name}
+          <b>이름:</b>
+          {name}
         </div>
-      </div>
-      <div>
         <div>
-          <b>닉네임:</b> {nickname}
+          <b>닉네임:</b>
+          {nickname}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Info;
