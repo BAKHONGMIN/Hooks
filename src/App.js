@@ -1,7 +1,7 @@
-import Average from "./Average";
+import CssModule from "./CSSModule";
 
 const App = () => {
-  return <Average />;
+  return <CssModule />;
 };
 
 export default App;
